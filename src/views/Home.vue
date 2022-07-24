@@ -33,7 +33,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr v-for="pizza in pizzas">
+						<tr v-for="pizza in pizzas" :key="pizza">
 							<td>{{ pizza.number }}</td>
 							<td>{{ pizza.size }}</td>
 							<td>{{ pizza.crust }}</td>
@@ -56,7 +56,8 @@
 <script>
 	import axios from 'axios'
 
-	const API_URL = 'http://127.0.0.1:8000/api'
+	// const API_URL = 'http://127.0.0.1:8000/api'
+	const API_URL = 'https://penbrothers-api.herokuapp.com/api'
 
 	export default {
 		name: 'Home',
